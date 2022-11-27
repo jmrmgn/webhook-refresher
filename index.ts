@@ -1,4 +1,4 @@
-import express, { Express, Request, Response } from 'express';
+import express, { Express, Request, Response, response } from 'express';
 
 import dotenv from 'dotenv';
 
@@ -9,6 +9,7 @@ const port = process.env.PORT;
 
 app.post('/', (req: Request, res: Response) => {
   console.log('# It is working!');
+  console.log('# response', response);
   res.send('Express & TypeScript boilerplate');
 });
 
